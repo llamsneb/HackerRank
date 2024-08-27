@@ -10,6 +10,7 @@ namespace HackerRank
     {
         public Dictionary<char, TrieNode> Children { get; } = new Dictionary<char, TrieNode>();
         public bool WordEnd = false;
+        public int Count = 0;
     }
 
     public class Trie
@@ -28,6 +29,7 @@ namespace HackerRank
                 }
 
                 node = node.Children[c];
+                node.Count++;
             }
 
             node.WordEnd = true;

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HackerRank.Prep3MonthsWk11;
 
 namespace HackerRank
 {
     internal class Prep3MonthsWk13
     {
-        /*****Problem: Tree: Find the Running Median*****/
+        /*****Problem: Find the Running Median*****/
         public static List<double> runningMedian(List<int> a)
         {
             PriorityQueue<int, int> lower = new PriorityQueue<int, int>(Comparer<int>.Create((a, b) => b - a));
@@ -39,6 +40,46 @@ namespace HackerRank
             }
 
             return med;
+        }
+
+        /*****Problem: Contacts*****/
+        public static List<int> contacts(List<List<string>> queries)
+        {
+            List<int> words = new List<int>();
+            TrieNode root = new TrieNode();
+            TrieNode curr;
+            
+            foreach (List<string> q in queries)
+            {
+                if (q[0] == "add")
+                {
+                    Trie.AddWord(root, q[1]);
+                }
+                else if (q[0] == "find")
+                {
+                    curr = root;
+                    bool isMatch = true;
+                    foreach (char c in q[1])
+                    {
+                        if (!curr.Children.ContainsKey(c))
+                        {
+                            words.Add(0);
+                            isMatch = false;
+                            break;
+                        }
+                        else
+                        {
+                            curr = curr.Children[c];
+                        }
+                    }
+
+                    if (isMatch)
+                    {
+                        words.Add(curr.Count);
+                    }
+                }
+            }
+            return words;
         }
     }
 }

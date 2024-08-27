@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Quic;
 using System.Numerics;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Xml.Linq;
 using static HackerRank.Prep3MonthsWk11;
@@ -355,16 +356,16 @@ namespace HackerRank
             //    "aabghgh",
             //};
             //Prep3MonthsWk12.noPrefix(words2);
-            List<string> words3 = new List<string> {
-                "aab",
-                "defgab",
-                "abcde",
-                "aabcde",
-                "cedaaa",
-                "bbbbbbbbbb",
-                "jabjjjad"
-            };
-            Prep3MonthsWk12.noPrefix(words3);
+            //List<string> words3 = new List<string> {
+            //    "aab",
+            //    "defgab",
+            //    "abcde",
+            //    "aabcde",
+            //    "cedaaa",
+            //    "bbbbbbbbbb",
+            //    "jabjjjad"
+            //};
+            //Prep3MonthsWk12.noPrefix(words3);
             //List<string> words4 = new List<string> {
             //    "aab",
             //    "defgab",
@@ -440,7 +441,28 @@ namespace HackerRank
             Prep3MonthsWk13.runningMedian(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
 
 
+            List<List<string>> strList = new List<List<string>> {
+                new List<string> { "add", "hack" },
+                new List<string> { "add", "hackerrank" },
+                new List<string> { "find", "hac" },
+                new List<string> { "find", "hak" }
+            };
 
+            Prep3MonthsWk13.contacts(strList);
+            List<List<string>> strList2 = new List<List<string>> {
+                new List<string> { "add", "s" },
+                new List<string> { "add", "ss" },
+                new List<string> { "add", "sss" },
+                new List<string> { "add", "ssss" },
+                new List<string> { "add", "sssss" },
+                new List<string> { "find", "s" },
+                new List<string> { "find", "ss" },
+                new List<string> { "find", "sss" },
+                new List<string> { "find", "ssss" },
+                new List<string> { "find", "sssss" },
+                new List<string> { "find", "ssssss" }
+            };
+            Prep3MonthsWk13.contacts(strList2);
 
 
 
