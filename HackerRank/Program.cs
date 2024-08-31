@@ -425,44 +425,44 @@ namespace HackerRank
             //};
             //Prep3MonthsWk12.componentsInGraph(edges2);
 
-            List<List<int>> edges2 = new List<List<int>>
-            {
-                new List<int> {1, 2 },
-                new List<int> {1, 3 },
-            };
-            Prep3MonthsWk12.bfs(4, 2, edges2, 1);
-            List<List<int>> edges3 = new List<List<int>>
-            {
-                new List<int> {2, 3 },
-            };
-            Prep3MonthsWk12.bfs(3, 1, edges3, 2);
+            //List<List<int>> edges2 = new List<List<int>>
+            //{
+            //    new List<int> {1, 2 },
+            //    new List<int> {1, 3 },
+            //};
+            //Prep3MonthsWk12.bfs(4, 2, edges2, 1);
+            //List<List<int>> edges3 = new List<List<int>>
+            //{
+            //    new List<int> {2, 3 },
+            //};
+            //Prep3MonthsWk12.bfs(3, 1, edges3, 2);
 
 
-            Prep3MonthsWk13.runningMedian(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
+            //Prep3MonthsWk13.runningMedian(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 });
 
 
-            List<List<string>> strList = new List<List<string>> {
-                new List<string> { "add", "hack" },
-                new List<string> { "add", "hackerrank" },
-                new List<string> { "find", "hac" },
-                new List<string> { "find", "hak" }
-            };
+            //List<List<string>> strList = new List<List<string>> {
+            //    new List<string> { "add", "hack" },
+            //    new List<string> { "add", "hackerrank" },
+            //    new List<string> { "find", "hac" },
+            //    new List<string> { "find", "hak" }
+            //};
 
-            Prep3MonthsWk13.contacts(strList);
-            List<List<string>> strList2 = new List<List<string>> {
-                new List<string> { "add", "s" },
-                new List<string> { "add", "ss" },
-                new List<string> { "add", "sss" },
-                new List<string> { "add", "ssss" },
-                new List<string> { "add", "sssss" },
-                new List<string> { "find", "s" },
-                new List<string> { "find", "ss" },
-                new List<string> { "find", "sss" },
-                new List<string> { "find", "ssss" },
-                new List<string> { "find", "sssss" },
-                new List<string> { "find", "ssssss" }
-            };
-            Prep3MonthsWk13.contacts(strList2);
+            //Prep3MonthsWk13.contacts(strList);
+            //List<List<string>> strList2 = new List<List<string>> {
+            //    new List<string> { "add", "s" },
+            //    new List<string> { "add", "ss" },
+            //    new List<string> { "add", "sss" },
+            //    new List<string> { "add", "ssss" },
+            //    new List<string> { "add", "sssss" },
+            //    new List<string> { "find", "s" },
+            //    new List<string> { "find", "ss" },
+            //    new List<string> { "find", "sss" },
+            //    new List<string> { "find", "ssss" },
+            //    new List<string> { "find", "sssss" },
+            //    new List<string> { "find", "ssssss" }
+            //};
+            //Prep3MonthsWk13.contacts(strList2);
 
             //List<List<int>> c2 = new List<List<int>>
             //{
@@ -471,15 +471,30 @@ namespace HackerRank
             //    new List<int>{2,3 },
             //};
             //Prep3MonthsWk13.roadsAndLibraries(3, 2, 1, c2);
-            List<List<int>> c3 = new List<List<int>>
-            {
-                new List<int>{1,2 },
-                new List<int>{1,3 },
-                new List<int>{1,4 },
+            //List<List<int>> c3 = new List<List<int>>
+            //{
+            //    new List<int>{1,2 },
+            //    new List<int>{1,3 },
+            //    new List<int>{1,4 },
+            //};
+            //Prep3MonthsWk13.roadsAndLibraries(5, 6, 1, c3);
+
+
+            //List<List<int>> astros = new List<List<int>> {
+            //    new List<int> {0,1},
+            //    new List<int> {2,3},
+            //    new List<int> {0,4},
+            //};
+            //Prep3MonthsWk13.journeyToMoon(5, astros);
+            //List<List<int>> astros2 = new List<List<int>> {
+            //    new List<int> {0,2},
+            //};
+            //Prep3MonthsWk13.journeyToMoon(4, astros2);
+            List<List<int>> astros3 = new List<List<int>> {
+                new List<int> {1,2},
+                new List<int> {3,4},
             };
-            Prep3MonthsWk13.roadsAndLibraries(5, 6, 1, c3);
-
-
+            Prep3MonthsWk13.journeyToMoon(100000, astros3);
 
             Console.WriteLine("Hello, World!");
         }                    

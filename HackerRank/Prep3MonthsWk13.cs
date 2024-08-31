@@ -137,5 +137,45 @@ namespace HackerRank
 
             return size;
         }
+
+        /*****Problem: Journey to the Moon*****/
+        public static long journeyToMoon(int n, List<List<int>> astronaut)
+        {
+            List<List<int>> adj = new List<List<int>>(n);
+            for (int i = 0; i < n; i++)
+            {
+                adj.Add(new List<int>());
+            }
+            foreach (List<int> e in astronaut)
+            {
+                int a = e[0];
+                int b = e[1];
+                adj[a].Add(b);
+                adj[b].Add(a);
+            }
+
+            bool[] visited = new bool[adj.Count];
+            List<int> countries = new List<int>();
+
+            // Loop through all vertices to handle disconnected graph
+            for (int i = 0; i < adj.Count; i++)
+            {
+                if (!visited[i])
+                {
+                    int size = 0;
+                    // If vertex i has not been visited, perform DFS from it
+                    countries.Add(dfs(adj, visited, i, size));
+                }
+            }
+
+            long totalPairs = (long)n*(n-1)/2;
+            long samePairs = 0;
+            foreach(int c in countries)
+            {
+                samePairs += c * (c - 1) / 2;
+            }
+
+            return totalPairs - samePairs;
+        }
     }
 }
