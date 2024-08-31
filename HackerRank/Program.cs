@@ -464,7 +464,20 @@ namespace HackerRank
             };
             Prep3MonthsWk13.contacts(strList2);
 
-
+            //List<List<int>> c2 = new List<List<int>>
+            //{
+            //    new List<int>{1,2 },
+            //    new List<int>{3,1 },
+            //    new List<int>{2,3 },
+            //};
+            //Prep3MonthsWk13.roadsAndLibraries(3, 2, 1, c2);
+            List<List<int>> c3 = new List<List<int>>
+            {
+                new List<int>{1,2 },
+                new List<int>{1,3 },
+                new List<int>{1,4 },
+            };
+            Prep3MonthsWk13.roadsAndLibraries(5, 6, 1, c3);
 
 
 

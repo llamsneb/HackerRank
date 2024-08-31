@@ -81,5 +81,61 @@ namespace HackerRank
             }
             return words;
         }
+
+        /*****Problem: Roads and Libraries*****/
+        public static long roadsAndLibraries(int n, int c_lib, int c_road, List<List<int>> cities)
+        {
+            if(c_lib <= c_road)
+            {
+                return (long)n * c_lib;
+            }
+
+            long cost = 0;
+            List<List<int>> adj = new List<List<int>>(n);
+            for (int i = 0; i <= n; i++)
+            {
+                adj.Add(new List<int>());
+            }
+            foreach (List<int> e in cities)
+            {
+                int a = e[0];
+                int b = e[1];
+                adj[a].Add(b);
+                adj[b].Add(a);
+            }
+
+            bool[] visited = new bool[adj.Count+1];
+            
+            // Loop through all vertices to handle disconnected graph
+            for (int i = 1; i < adj.Count; i++)
+            {
+                if (!visited[i])
+                {
+                    int size = 0;
+                    // If vertex i has not been visited, perform DFS from it
+                    size = dfs(adj, visited, i, size);
+                    cost += c_lib + (size - 1) * c_road; 
+                }
+            }
+
+            return cost;
+        }
+
+        static int dfs(List<List<int>> adj, bool[] visited, int s, int size)
+        {
+            // Mark the current vertex as visited
+            visited[s] = true;
+            size++;
+            // Recursively visit all adjacent vertices that are not visited yet
+            foreach(int i in adj[s])
+            {
+                if (!visited[i])
+                {
+                    size = dfs(adj, visited, i, size); // Recursive call
+                }
+            }
+
+            return size;
+        }
     }
 }
