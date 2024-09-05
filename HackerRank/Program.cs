@@ -496,6 +496,11 @@ namespace HackerRank
             };
             Prep3MonthsWk13.journeyToMoon(100000, astros3);
 
+
+            //Prep3MonthsWk13.hanoi(new List<int> { 1, 4, 1 });
+            Prep3MonthsWk13.hanoi(new List<int> { 1, 3, 3 });
+
+
             Console.WriteLine("Hello, World!");
         }                    
                
