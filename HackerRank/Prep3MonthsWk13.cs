@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using static HackerRank.Prep3MonthsWk11;
@@ -296,6 +297,98 @@ namespace HackerRank
             return moves;
         }
 
-            
+        /*****Problem: Cube Summation*****/   
+        //Fenwick/Binary Indexed Tree
+        public static void updateBIT(int n, int x, int y , int z, long val, long[,,] BITree)
+        {
+            // Traverse all ancestors and add 'val'  
+            while (x <= n)
+            {
+                int yi = y;
+                while(yi <= n)
+                {
+                    int zi = z;
+                    while (zi <= n)
+                    {
+                        // Add 'val' to current node of BIT Tree  
+                        BITree[x,yi,zi] += val;
+                        // Update index to that of parent in update View
+                        zi += zi & (-zi);
+                    }
+                    // Update index to that of parent in update View
+                    yi += yi & (-yi);
+                }
+                // Update index to that of parent in update View  
+                x += x & (-x);
+            }
+        }
+
+        public static long getSum(int x, int y, int z, long[,,] BITree)
+        {
+            long sum = 0; // Initialize result              
+
+            // Traverse ancestors of BITree[index]
+            while (x > 0)
+            {
+                int yi = y;
+                while (yi > 0)
+                {
+                    int zi = z;
+                    while(zi > 0)
+                    {
+                        // Add current element of BITree to sum  
+                        sum += BITree[x,yi,zi];
+                        // Move index to parent node in getSum View  
+                        zi -= zi & (-zi);
+                    }
+                    // Move index to parent node in getSum View  
+                    yi -= yi & (-yi);
+                }
+                // Move index to parent node in getSum View  
+                x -= x & (-x);
+            }
+            return sum;
+        }
+
+        public static List<long> cubeSum(int n, List<string> operations)
+        {
+            long[,,] cube = new long[n+1,n+1,n+1];
+            long[,,] BITree = new long[n + 1, n + 1, n + 1];
+            List<long> results = new List<long>();
+
+            foreach(string op in operations)
+            {
+                string[] opList = op.Split();
+                if (opList[0] == "UPDATE")
+                {
+                    int xi = Convert.ToInt32(opList[1]);
+                    int yi = Convert.ToInt32(opList[2]);
+                    int zi = Convert.ToInt32(opList[3]);
+                    int val = Convert.ToInt32(opList[4]);
+                    
+                    updateBIT(n, xi, yi, zi, val - cube[xi, yi, zi], BITree);
+                    cube[xi, yi, zi] = val;
+                }
+                else if(opList[0] == "QUERY")
+                {
+                    int x1 = Convert.ToInt32(opList[1]);
+                    int y1 = Convert.ToInt32(opList[2]);
+                    int z1 = Convert.ToInt32(opList[3]);
+                    int x2 = Convert.ToInt32(opList[4]);
+                    int y2 = Convert.ToInt32(opList[5]);
+                    int z2 = Convert.ToInt32(opList[6]);                    
+
+                    long num = getSum(x2, y2, z2, BITree) -
+                            (getSum(x1-1, y2, z2, BITree) + getSum(x2, y1 - 1, z2, BITree) + getSum(x2, y2, z1-1, BITree)) +
+                            (getSum(x1-1, y1-1, z2, BITree) + getSum(x1 - 1, y2, z1-1, BITree) + getSum(x2, y1 - 1, z1-1, BITree)) -
+                            getSum(x1-1, y1-1, z1-1, BITree);
+
+                    results.Add(num);
+                }
+            }
+
+            return results;
+        }
+
     }
 }

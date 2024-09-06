@@ -490,15 +490,25 @@ namespace HackerRank
             //    new List<int> {0,2},
             //};
             //Prep3MonthsWk13.journeyToMoon(4, astros2);
-            List<List<int>> astros3 = new List<List<int>> {
-                new List<int> {1,2},
-                new List<int> {3,4},
-            };
-            Prep3MonthsWk13.journeyToMoon(100000, astros3);
+            //List<List<int>> astros3 = new List<List<int>> {
+            //    new List<int> {1,2},
+            //    new List<int> {3,4},
+            //};
+            //Prep3MonthsWk13.journeyToMoon(100000, astros3);
 
 
             //Prep3MonthsWk13.hanoi(new List<int> { 1, 4, 1 });
-            Prep3MonthsWk13.hanoi(new List<int> { 1, 3, 3 });
+            //Prep3MonthsWk13.hanoi(new List<int> { 1, 3, 3 });
+
+            List<string> strList = new List<string>
+            {
+                "UPDATE 2 2 2 4",
+                "QUERY 1 1 1 3 3 3",
+                "UPDATE 1 1 1 23",
+                "QUERY 2 2 2 4 4 4",
+                "QUERY 1 1 1 3 3 3"
+            };
+            Prep3MonthsWk13.cubeSum(4,strList);
 
 
             Console.WriteLine("Hello, World!");
