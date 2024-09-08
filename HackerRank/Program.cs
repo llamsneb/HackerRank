@@ -500,16 +500,44 @@ namespace HackerRank
             //Prep3MonthsWk13.hanoi(new List<int> { 1, 4, 1 });
             //Prep3MonthsWk13.hanoi(new List<int> { 1, 3, 3 });
 
-            List<string> strList = new List<string>
-            {
-                "UPDATE 2 2 2 4",
-                "QUERY 1 1 1 3 3 3",
-                "UPDATE 1 1 1 23",
-                "QUERY 2 2 2 4 4 4",
-                "QUERY 1 1 1 3 3 3"
-            };
-            Prep3MonthsWk13.cubeSum(4,strList);
+            //List<string> strList = new List<string>
+            //{
+            //    "UPDATE 2 2 2 4",
+            //    "QUERY 1 1 1 3 3 3",
+            //    "UPDATE 1 1 1 23",
+            //    "QUERY 2 2 2 4 4 4",
+            //    "QUERY 1 1 1 3 3 3"
+            //};
+            //Prep3MonthsWk13.cubeSum(4,strList);
 
+            //List<int> trainT = new List<int>
+            //{
+            //    1,3,1,4,2
+            //};
+            //List<int> trainF = new List<int>
+            //{
+            //    2,5,4,5,3
+            //};
+            //List<int> trainW = new List<int>
+            //{
+            //    60,70,120,150,80
+            //};
+            //Prep3MonthsWk13.getCost(5, trainT, trainF, trainW);
+
+            List<int> trainT = new List<int>
+            {
+                1,2,3,4,1,3
+            };
+            List<int> trainF = new List<int>
+            {
+                2,3,4,5,3,5
+            };
+            List<int> trainW = new List<int>
+            {
+                30,50,70,90,70,85
+            };
+            Prep3MonthsWk13.getCost(5, trainT, trainF, trainW);
+            
 
             Console.WriteLine("Hello, World!");
         }                    

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using static HackerRank.Prep3MonthsWk11;
@@ -390,5 +391,75 @@ namespace HackerRank
             return results;
         }
 
+        /*****Problem: Jack goes to Rapture*****/        
+        public static void getCost(int gNodes, List<int> gFrom, List<int> gTo, List<int> gWeight)
+        {
+            // Print your answer within the function and return nothing
+            List<Tuple<int, int>>[] adj = new List<Tuple<int, int>>[gNodes+1];
+            for (int i = 1; i <= gNodes; i++)
+            {
+                adj[i] = new List<Tuple<int, int>>();
+            }
+
+            for(int i = 0; i < gFrom.Count; i++)
+            {
+                int f = gFrom[i];
+                int t = gTo[i];
+                int w = gWeight[i];
+                adj[f].Add(new Tuple<int, int>(w,t));
+                adj[t].Add(new Tuple<int, int>(w,f));
+            }
+
+            PriorityQueue<Tuple<int, int>, Tuple<int, int>> pq = new PriorityQueue<Tuple<int, int>, Tuple<int, int>>();
+            // Create a vector for distances and initialize all distances as infinite (INF)
+            int[] dist = new int[gNodes+1];
+            for (int i = 1; i <= gNodes; i++)
+            {
+                dist[i] = int.MaxValue;
+            }
+            // Insert source itself in the priority queue and initialize its distance as 0.
+            Tuple<int, int> src = new Tuple<int, int>(0, gFrom[0]);
+            pq.Enqueue(src,src);
+            dist[gFrom[0]] = 0;
+
+            while (pq.Count > 0)
+            {
+                // The first vertex in tuple is the minimum distance vertex,
+                // extract it from the sorted set.
+                // vertex label is stored in the second element of the tuple.
+                // (it has to be done this way to keep the vertices sorted by distance,
+                // where distance must be the first item in the tuple)
+                Tuple<int, int> current = pq.Dequeue();
+                int u = current.Item2;
+                int currCost = current.Item1;
+
+                if (currCost > dist[u]) continue;
+                // 'i' is used to get all adjacent vertices of a vertex
+                foreach (var i in adj[u])
+                {
+                    // Get vertex label and weight of the current adjacent vertex of u.
+                    int v = i.Item2;
+                    int cost = Math.Max(0, i.Item1-currCost);
+
+                    // If there is a shorter path to v through u.
+                    if (dist[v] > dist[u] + cost)
+                    {
+                        Tuple<int, int> vert = new Tuple<int, int>(dist[u] + cost, v);
+                        // Updating distance of v
+                        pq.Enqueue(vert, vert);
+                        dist[v] = dist[u] + cost;
+                    }
+                }
+            }
+
+            if (dist[gNodes] == int.MaxValue)
+            {
+                Console.WriteLine("NO PATH EXISTS");
+            }
+            else
+            {
+                Console.WriteLine(dist[gNodes]);
+            }
+        }
     }
 }
