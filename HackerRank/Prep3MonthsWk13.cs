@@ -461,5 +461,29 @@ namespace HackerRank
                 Console.WriteLine(dist[gNodes]);
             }
         }
+
+        /*****Problem: Minimum Loss 1*****/
+        public static int minimumLoss(List<long> price)
+        {
+            long min = long.MaxValue;
+            Dictionary<long, int> dic = new Dictionary<long, int>();
+            for(int i = 0; i < price.Count; i++)
+            {
+                dic.Add(price[i], i);
+            }
+
+            price = price.OrderByDescending(p => p).ToList();
+
+            for (int i = 0; i < price.Count - 1; i++)
+            {
+                // If index is lower then get difference in price.
+                if (dic[price[i]] < dic[price[i + 1]]) { 
+                    long diff = price[i]-price[i + 1];
+                    min = Math.Min(diff, min);
+                }
+            }
+
+            return (int)min;
+        }
     }
 }
