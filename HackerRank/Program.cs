@@ -524,21 +524,21 @@ namespace HackerRank
             //};
             //Prep3MonthsWk13.getCost(5, trainT, trainF, trainW);
 
-            List<int> trainT = new List<int>
-            {
-                1,2,3,4,1,3
-            };
-            List<int> trainF = new List<int>
-            {
-                2,3,4,5,3,5
-            };
-            List<int> trainW = new List<int>
-            {
-                30,50,70,90,70,85
-            };
-            Prep3MonthsWk13.getCost(5, trainT, trainF, trainW);
-            
+            //List<int> trainT = new List<int>
+            //{
+            //    1,2,3,4,1,3
+            //};
+            //List<int> trainF = new List<int>
+            //{
+            //    2,3,4,5,3,5
+            //};
+            //List<int> trainW = new List<int>
+            //{
+            //    30,50,70,90,70,85
+            //};
+            //Prep3MonthsWk13.getCost(5, trainT, trainF, trainW);
 
+            Prep3MonthsWk13.shortPalindrome("ghhggh");
             Console.WriteLine("Hello, World!");
         }                    
                

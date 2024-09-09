@@ -485,5 +485,36 @@ namespace HackerRank
 
             return (int)min;
         }
+
+        /*****Problem: Short Palindrome*****/
+        public static int shortPalindrome(string s)
+        {
+            int mod = 1000000007;
+            int[] freq = new int[26];
+            int[,] pairFreq = new int[26,26];
+            int[] tripletFreq = new int[26];
+
+            int palinCnt = 0;
+
+            foreach(char c in s)
+            {
+                int charIdx = c - 'a';
+                palinCnt = (palinCnt + tripletFreq[charIdx]) % mod;
+
+                for(int i = 0; i < 26; i++)
+                {
+                    tripletFreq[i] = (tripletFreq[i] + pairFreq[i, charIdx]) % mod;
+                }
+
+                for(int i = 0; i < 26; i++)
+                {
+                    pairFreq[i, charIdx] = (pairFreq[i, charIdx] + freq[i]) % mod;
+                }
+
+                freq[charIdx]++;
+            }
+
+            return palinCnt;
+        }
     }
 }
