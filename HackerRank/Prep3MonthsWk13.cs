@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -516,5 +517,57 @@ namespace HackerRank
 
             return palinCnt;
         }
+
+        /*****Problem: Cut the Tree*****/
+        /*Approach: 
+         * 1. Calcualte sum of values at each vertex 
+         * 2. Find minimum absolute value of sum at root - 2*sum at every vertex. 
+         * This works because when you cut an edge, the sum at root reduces by that edge vertex's sum value 
+         * and this also becomes the first tree. 
+         * The cut vertex sum becomes the value of the second tree. 
+         * The answer is the minimum absolute diff of these.
+         * */
+        public static int cutTheTree(List<int> data, List<List<int>> edges)
+        {
+            int[] subTree = new int[data.Count+1];
+
+            List<List<int>> adj = new List<List<int>>(data.Count + 1);
+            for(int i = 0; i < data.Count+1; i++)
+            {
+                adj.Add(new List<int>());
+            }
+            foreach(List<int> e in edges)
+            {
+                int u = e[0];
+                int v = e[1];
+                adj[u].Add(v);
+                adj[v].Add(u);
+            }
+
+            dfsCutTree(adj, data, subTree , -1, 1);
+
+            int minDiff = int.MaxValue;
+            for (int i = 1; i < subTree.Length; i++)
+            {
+                minDiff = Math.Min(minDiff, Math.Abs(subTree[1] - subTree[i]*2));
+            }
+
+            return minDiff;            
+        }
+
+        public static void dfsCutTree(List<List<int>> adj, List<int> data, int[] subTree, int parent, int idx)
+        {
+            int sum = data[idx-1];
+
+            foreach (int i in adj[idx])
+            {
+                if(i != parent)
+                {
+                    dfsCutTree(adj, data, subTree, idx, i);
+                    sum += subTree[i];
+                }
+            }
+            subTree[idx] = sum;
+        }               
     }
 }

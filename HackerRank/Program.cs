@@ -538,7 +538,39 @@ namespace HackerRank
             //};
             //Prep3MonthsWk13.getCost(5, trainT, trainF, trainW);
 
-            Prep3MonthsWk13.shortPalindrome("ghhggh");
+            //Prep3MonthsWk13.shortPalindrome("ghhggh");
+
+            List<int> ctData = new List<int>
+            {
+                100, 200, 100, 500, 100, 600
+            };
+            List<List<int>> ctEdges = new List<List<int>>
+            {
+                new List<int>{1,2},
+                new List<int>{2,3},
+                new List<int>{2,5},
+                new List<int>{4,5},
+                new List<int>{5,6},
+            };
+            Prep3MonthsWk13.cutTheTree(ctData, ctEdges);
+            List<int> ctData2 = new List<int>
+            {
+                205, 573, 985, 242, 830, 514, 592, 263, 142, 915
+            };
+            List<List<int>> ctEdges2 = new List<List<int>>
+            {
+                new List<int>{2,8},
+                new List<int>{10, 5},
+                new List<int>{1, 7},
+                new List<int>{6, 9},
+                new List<int>{4, 3},
+                new List<int>{8, 10},
+                new List<int>{5, 1},
+                new List<int>{7, 6},
+                new List<int>{9, 4},
+            };
+            Prep3MonthsWk13.cutTheTree(ctData2, ctEdges2);
+
             Console.WriteLine("Hello, World!");
         }                    
                
