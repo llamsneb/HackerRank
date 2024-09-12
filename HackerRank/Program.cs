@@ -589,60 +589,8 @@ namespace HackerRank
             q[x] = q[y];
             q[y] = temp;
             return q;
-        }
-
-        public static int palindromeIndex(string s)
-        {
-            int b = s.Count() - 1;
-            int retVal = -1;
-            for (int f = 0; f < s.Count() / 2; f++)
-            {
-                if (s[f] == s[b])
-                {
-                    b--;
-                }
-                else
-                {
-                    if (s[f] == s[b - 1])
-                    {
-                        retVal = b;
-                    }
-                    else
-                    {
-                        retVal = f;
-                    }
-                }
-            }
-            return retVal;
-        }
-
-        public static int superDigit(string n, int k)
-        {
-            if (n.Length == 1)
-            {
-                return Convert.ToInt32(n);
-            }
-
-            int p = 0;
-            for (int i = 0; i < n.Length; i++)
-            {
-                p += Convert.ToInt32(n[i]);
-            }
-            p *= k;
-
-            string pStr = p.ToString();
-            int sup = 0;
-            ////while(sup.ToString().Length > 1){
-            for (int i = 0; i < pStr.Length; i++)
-            {
-                sup += Convert.ToInt32(pStr[i]);
-            }
-            //}
-
-
-
-            return sup;
-        }
+        }        
+        
 
         public static BigInteger fibonacciModified(int t1, int t2, int n)
         {
