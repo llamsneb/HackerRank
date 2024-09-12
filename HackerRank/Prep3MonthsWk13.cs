@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -568,6 +569,61 @@ namespace HackerRank
                 }
             }
             subTree[idx] = sum;
-        }               
+        }
+
+        /*****Problem: Subset Component*****/
+        static int col = 0;
+
+        public static int findConnectedComponents(List<long> d)
+        {
+            int ans = 0;
+
+            for (int mask = 0; mask < 1 << d.Count; ++mask)
+            {
+                col = 0;
+                int countBits = 64;
+                int add = 0;
+
+                for (int i = 0; i < d.Count; ++i)
+                {
+                    if (((mask & ~col) & (1 << i)) != 0)
+                    {
+                        long mask1 = dfs(i, mask, d);
+
+                        if (mask1 != 0)
+                        {
+                            add++;
+                            countBits -= (int)long.PopCount(mask1);
+                        }
+                    }
+                }
+
+                add += countBits;
+                ans += add;
+            }
+
+            return ans;
+        }
+
+        private static long dfs(int i, int mask, List<long> a)
+        {
+            if ((col & (1 << i)) != 0)
+            {
+                return 0;
+            }
+
+            col |= 1 << i;
+            long ret = a[i];
+
+            for (int j = 0; j < a.Count; ++j)
+            {
+                if ((mask & (1 << j)) != 0 && (a[i] & a[j]) != 0)
+                {
+                    ret |= dfs(j, mask, a);
+                }
+            }
+
+            return ret;
+        }
     }
 }
