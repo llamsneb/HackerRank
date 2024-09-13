@@ -574,43 +574,19 @@ namespace HackerRank
             Console.WriteLine("Hello, World!");
         }                    
         
-
         public static int getNextCity(List<int> arr, int start, int k)
         {
             return 0;
         }
-
-
-        
-
+                
         public static List<int> swap(List<int> q, int x, int y)
         {
             int temp = q[x];
             q[x] = q[y];
             q[y] = temp;
             return q;
-        }      
-                                                                           
-                                        
-        public static int lonelyinteger(List<int> a)
-        {
-            // Write your code here
-            int x = 0;
-            for (int i = 0; i < a.Count; i++)
-            {
-                x = x ^ a[i];
-            }
-            return x;
-        }
-
-        public static List<int> countingSort(List<int> arr)
-        {
-            List<int> freqs = new List<int>(new int[100]);
-            for (int i = 0; i < arr.Count; i++)
-            {
-                freqs[arr[i]] += 1;
-            }
-            return freqs;
-        }
+        }                                                                              
+                                   
+                
     }
 }
