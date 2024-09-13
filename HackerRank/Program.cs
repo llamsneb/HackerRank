@@ -16,76 +16,76 @@ namespace HackerRank
         static void Main(string[] args)
         {
 
-            List<int> arr = new List<int>();
-            arr.Add(1);
-            arr.Add(2);
-            arr.Add(3);
-            arr.Add(4);
-            arr.Add(3);
-            arr.Add(2);
-            arr.Add(1);
+            //List<int> arr = new List<int>();
+            //arr.Add(1);
+            //arr.Add(2);
+            //arr.Add(3);
+            //arr.Add(4);
+            //arr.Add(3);
+            //arr.Add(2);
+            //arr.Add(1);
 
-            int res = lonelyinteger(arr);
-            Console.WriteLine(res);
+            //int res = Prep3MonthsWk02.lonelyinteger(arr);
+            //Console.WriteLine(res);
 
-            List<int> result = countingSort(arr);
-            foreach (int i in result) { Console.WriteLine(i); }
+            //List<int> result = Prep3MonthsWk02.countingSort(arr);
+            //foreach (int i in result) { Console.WriteLine(i); }
 
-            separateNumbers("99100");
+            //Prep3MonthsWk04.separateNumbers("99100");
 
-            caesarCipher("Always-Look-on-the-Bright-Side-of-Life", 5);
+            //Prep3MonthsWk04.caesarCipher("Always-Look-on-the-Bright-Side-of-Life", 5);
 
-            anagram("xaxbbbxx");
+            //Prep3MonthsWk04.anagram("xaxbbbxx");
 
-            Console.WriteLine(minimumNumber(5, "2bbbb"));
+            //Console.WriteLine(Prep3MonthsWk05.minimumNumber(5, "2bbbb"));
 
-            List<List<int>> queries =
-            [
-                new List<int> { 1, 0, 5 },
-                new List<int> { 1, 1, 7 },
-                new List<int> { 1, 0, 3 },
-                new List<int> { 2, 1, 0 },
-                new List<int> { 2, 1, 1 },
-            ];
+            //List<List<int>> queries =
+            //[
+            //    new List<int> { 1, 0, 5 },
+            //    new List<int> { 1, 1, 7 },
+            //    new List<int> { 1, 0, 3 },
+            //    new List<int> { 2, 1, 0 },
+            //    new List<int> { 2, 1, 1 },
+            //];
 
-            dynamicArray(2, queries);
+            //Prep3MonthsWk05.dynamicArray(2, queries);
 
-            List<string> grid = new List<string> { "mpxz", "abcd", "wlmf" };
+            //List<string> grid = new List<string> { "mpxz", "abcd", "wlmf" };
 
-            gridChallenge(grid);
+            //Prep3MonthsWk05.gridChallenge(grid);
 
-            Console.WriteLine(fibonacciModified(0, 1, 10));
+            //Console.WriteLine(Prep3MonthsWk05.fibonacciModified(0, 1, 10));
 
-            Console.WriteLine(palindromeIndex("hgygsvlfwcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcflvsgygh"));
+            //Console.WriteLine(Prep3MonthsWk06.palindromeIndex("hgygsvlfwcwnswtuhmyaljkqlqjjqlqkjlaymhutwsnwcflvsgygh"));
 
 
-            List<int> bribes = new List<int>() { 1, 2, 5, 3, 7, 8, 6, 4 };
+            //List<int> bribes = new List<int>() { 1, 2, 5, 3, 7, 8, 6, 4 };
             //List<int> bribes = new List<int>() { 5, 1, 2, 3, 7, 8, 6, 4 };
 
-            minimumBribes(bribes);
+            //Prep3MonthsWk07.minimumBribes(bribes);
 
-            List<int> cities = new List<int> { 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0 };
-            List<int> cities2 = new List<int> { 0, 1, 1, 1, 1, 0 };
-            List<int> cities3 = new List<int> { 0, 1, 0, 0, 0, 1, 0 };
-            List<int> cities4 = new List<int> { 0, 1, 0, 0, 0, 1, 1, 1, 1, 1 };
-            List<int> cities5 = new List<int> { 0, 1, 0, 0, 0, 1, 1, 1, 1, 1 };
+            //List<int> cities = new List<int> { 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0 };
+            //List<int> cities2 = new List<int> { 0, 1, 1, 1, 1, 0 };
+            //List<int> cities3 = new List<int> { 0, 1, 0, 0, 0, 1, 0 };
+            //List<int> cities4 = new List<int> { 0, 1, 0, 0, 0, 1, 1, 1, 1, 1 };
+            //List<int> cities5 = new List<int> { 0, 1, 0, 0, 0, 1, 1, 1, 1, 1 };
 
             //Console.WriteLine(pylons(20, cities));
             //Console.WriteLine(pylons(20, cities));
             //Console.WriteLine(isValid("aaaabbcc"));
 
 
-            List<int> ranked = new List<int> { 100, 100, 50, 40, 40, 20, 10 };
-            List<int> player = new List<int> { 5, 25, 50, 100, 120, 130 };
+            //List<int> ranked = new List<int> { 100, 100, 50, 40, 40, 20, 10 };
+            //List<int> player = new List<int> { 5, 25, 50, 100, 120, 130 };
             //List<int> ranked = new List<int> { 997,981,957,933,930,927,926,920,916,896,887,874,863,863,858,847,815,809,803,794,789,785,783,778,764,755,751,740,737,730,691,677,652,650,587,585,583,568,546,541,540,538,531,527,506,493,457,435,430,427,422,422,414,404,400,394,387,384,374,371,369,369,368,365,363,337,336,328,325,316,314,306,282,277,230,227,212,199,179,173,171,168,136,125,124,95,92,88,85,70,68,61,60,59,44,43,28,23,13,12
             //};
             //List<int> player = new List<int> { 12,20,30,32,35,37,63,72,83,85,96,98,98,118,122,125,129,132,140,144,150,164,184,191,194,198,200,220,228,229,229,236,238,246,259,271,276,281,283,287,300,302,306,307,312,318,321,325,341,341,341,344,349,351,354,356,366,369,370,379,380,380,396,405,408,417,423,429,433,435,438,441,442,444,445,445,452,453,465,466,467,468,469,471,475,482,489,491,492,493,498,500,501,504,506,508,523,529,530,539,543,551,552,556,568,569,571,587,591,601,602,606,607,612,614,619,620,623,625,625,627,638,645,653,661,662,669,670,676,684,689,690,709,709,710,716,724,726,730,731,733,737,744,744,747,757,764,765,765,772,773,774,777,787,794,796,797,802,805,811,814,819,819,829,830,841,842,847,857,857,859,860,866,872,879,882,895,900,900,903,905,915,918,918,922,925,927,928,929,931,934,937,955,960,966,974,982,988,996,996 };
-            List<int> leaders = climbingLeaderboard(ranked, player);
-            foreach (int i in leaders) { Console.WriteLine(i); }
+            //List<int> leaders = Prep3MonthsWk07.climbingLeaderboard(ranked, player);
+            //foreach (int i in leaders) { Console.WriteLine(i); }
 
-            List<string> bigSort = new List<string>() { "31415926535897932384626433832795", "1", "3", "10", "3", "5" };
-            var bigSorted = bigSorting(bigSort);
-            foreach (string i in bigSorted) { Console.WriteLine(i); }
+            //List<string> bigSort = new List<string>() { "31415926535897932384626433832795", "1", "3", "10", "3", "5" };
+            //var bigSorted = Prep3MonthsWk07.bigSorting(bigSort);
+            //foreach (string i in bigSorted) { Console.WriteLine(i); }
 
 
 
@@ -109,18 +109,18 @@ namespace HackerRank
             //    }
             //}
 
-            Console.WriteLine(sherlockAndAnagrams("cdcd"));
-            Console.WriteLine(superReducedString("aaabccddd"));
-            Console.WriteLine(isBalanced("{(([])[])[]}"));
-            Console.WriteLine(nextPrime(2));
-            Console.WriteLine(nextPrime(6));
-            Console.WriteLine(nextPrime(5));
-            Console.WriteLine(nextPrime(11));
-            Console.WriteLine(nextPrime(23));
-            Console.WriteLine(nextPrime(4));
+            //Console.WriteLine(Prep3MonthsWk08.sherlockAndAnagrams("cdcd"));
+            //Console.WriteLine(Prep3MonthsWk08.superReducedString("aaabccddd"));
+            //Console.WriteLine(Prep3MonthsWk08.isBalanced("{(([])[])[]}"));
+            //Console.WriteLine(Prep3MonthsWk09.nextPrime(2));
+            //Console.WriteLine(Prep3MonthsWk09.nextPrime(6));
+            //Console.WriteLine(Prep3MonthsWk09.nextPrime(5));
+            //Console.WriteLine(Prep3MonthsWk09.nextPrime(11));
+            //Console.WriteLine(Prep3MonthsWk09.nextPrime(23));
+            //Console.WriteLine(Prep3MonthsWk09.nextPrime(4));
 
-            var waiterList = waiter(new List<int> { 80, 37, 86, 79, 8, 39, 43, 41, 15, 33, 30, 15, 45, 55, 61, 74, 49, 49, 20, 66, 77, 19, 85, 44, 81, 82, 27, 5, 36, 83, 91, 45, 39, 44, 19, 44, 71, 49, 8, 66, 81, 40, 29, 60, 35, 31, 44 }, 21);
-            foreach (int i in waiterList) { Console.WriteLine(i); }
+            //var waiterList = Prep3MonthsWk09.waiter(new List<int> { 80, 37, 86, 79, 8, 39, 43, 41, 15, 33, 30, 15, 45, 55, 61, 74, 49, 49, 20, 66, 77, 19, 85, 44, 81, 82, 27, 5, 36, 83, 91, 45, 39, 44, 19, 44, 71, 49, 8, 66, 81, 40, 29, 60, 35, 31, 44 }, 21);
+            //foreach (int i in waiterList) { Console.WriteLine(i); }
 
             //Console.WriteLine(stockmax(new List<int> { 1,2,100 }));
             //Console.WriteLine(stockmax(new List<int> { 1, 3, 1, 2 }));
@@ -158,28 +158,28 @@ namespace HackerRank
             //List<int> h3 = new List<int> { 1,1,4, 1 };
             //equalStacks(h1, h2, h3);
 
-            int coinN = 10;
-            List<long> coins = new List<long> { 2, 5, 10 };
+            //int coinN = 10;
+            //List<long> coins = new List<long> { 2, 5, 10 };
             //Console.WriteLine(getWays(coinN, coins));
 
-            Console.WriteLine(alternate("asdcbsdcagfsdbgdfanfghbsfdab"));
-            maxSubarray(new List<int> { 1, -1, -1, -1, -1, 5 });
+            //Console.WriteLine(Prep3MonthsWk09.alternate("asdcbsdcagfsdbgdfanfghbsfdab"));
+            //Prep3MonthsWk09.maxSubarray(new List<int> { 1, -1, -1, -1, -1, 5 });
 
-            List<List<int>> pList = new List<List<int>> {
-                new List<int>{ 1,5 },
-                new List<int>{ 10,3 },
-                new List<int>{ 3,4 }
-            };
-            truckTour(pList);
+            //List<List<int>> pList = new List<List<int>> {
+            //    new List<int>{ 1,5 },
+            //    new List<int>{ 10,3 },
+            //    new List<int>{ 3,4 }
+            //};
+            //Prep3MonthsWk09.truckTour(pList);
 
             //Console.WriteLine(legoBlocks(4, 4));
-            Console.WriteLine(Prep3MonthsWk10.legoBlocks(8,10));
+            //Console.WriteLine(Prep3MonthsWk10.legoBlocks(8,10));
 
-            Prep3MonthsWk10.weightedUniformStrings("abccddde",new List<int> { 6,1,3,12,5,9,10 });
-            
+            //Prep3MonthsWk10.weightedUniformStrings("abccddde",new List<int> { 6,1,3,12,5,9,10 });
+
             //Console.WriteLine(permutationGame(new List<int> { 1,2,3 }));
-            Console.WriteLine(Prep3MonthsWk10.permutationGame(new List<int> { 1, 3, 2 }));
-            Console.WriteLine(Prep3MonthsWk10.permutationGame(new List<int> { 5, 3, 2, 1, 4 }));
+            //Console.WriteLine(Prep3MonthsWk10.permutationGame(new List<int> { 1, 3, 2 }));
+            //Console.WriteLine(Prep3MonthsWk10.permutationGame(new List<int> { 5, 3, 2, 1, 4 }));
             //Console.WriteLine(permutationGame(new List<int> { 10, 7, 9, 2, 5, 8, 4, 1, 3, 6 }));
 
             //string line;
@@ -238,24 +238,24 @@ namespace HackerRank
             //Prep3MonthsWk11.lilysHomework(new List<int> { 2, 5, 3, 1 });
             //Prep3MonthsWk11.lilysHomework(new List<int> { 3,4,2,5,1 });
 
-            TreeNode root = new TreeNode(1);
-            root.left = new TreeNode(2);
-            root.right = new TreeNode(3);
-            root.left.left = new TreeNode(4);
-            root.left.right = new TreeNode(5);
-            root.right.right = new TreeNode(6);
+            //TreeNode root = new TreeNode(1);
+            //root.left = new TreeNode(2);
+            //root.right = new TreeNode(3);
+            //root.left.left = new TreeNode(4);
+            //root.left.right = new TreeNode(5);
+            //root.right.right = new TreeNode(6);
 
-            Prep3MonthsWk11.postOrder(root);
-            Prep3MonthsWk11.preOrder(root);
+            //Prep3MonthsWk11.postOrder(root);
+            //Prep3MonthsWk11.preOrder(root);
 
 
             /*****Problem: Tree: Postorder Traversal*****/
-            int[] charFreqs = new int[256];
-            string test = "Rumpelstiltskin";
-            foreach(char c in test.ToCharArray())
-            {
-                charFreqs[c]++;
-            }
+            //int[] charFreqs = new int[256];
+            //string test = "Rumpelstiltskin";
+            //foreach(char c in test.ToCharArray())
+            //{
+            //    charFreqs[c]++;
+            //}
             //for(int i = 0; i < test.Length; i++)
             //{
             //    charFreqs[i] = test[i];
@@ -266,55 +266,55 @@ namespace HackerRank
             //}
 
             // build tree
-            Node tree = buildTree(charFreqs);
+            //Node tree = buildTree(charFreqs);
 
-            // print out results
-            printCodes(tree, new StringBuilder());
-            StringBuilder s = new StringBuilder();
+            //// print out results
+            //printCodes(tree, new StringBuilder());
+            //StringBuilder s = new StringBuilder();
 
-            for (int i = 0; i < test.Length; i++)
-            {
-                char c = test[i];
-                s.Append(Prep3MonthsWk11.mapA[c]);
-            }
+            //for (int i = 0; i < test.Length; i++)
+            //{
+            //    char c = test[i];
+            //    s.Append(Prep3MonthsWk11.mapA[c]);
+            //}
 
             //Decoding d = new Decoding();
             //d.decode(s.toString(), tree);
-            Prep3MonthsWk11.decode(s.ToString(), tree);
+            //Prep3MonthsWk11.decode(s.ToString(), tree);
 
             /*****END Problem: Tree: Postorder Traversal *****/
 
-            List<List<int>> matrix = new List<List<int>>
-            {
-                new List<int>{1, 1, 0, 0 },
-                new List<int>{0, 1, 1, 0 },
-                new List<int>{0, 0, 1, 0 },
-                new List<int>{1, 0, 0, 0 }
-            };
+            //List<List<int>> matrix = new List<List<int>>
+            //{
+            //    new List<int>{1, 1, 0, 0 },
+            //    new List<int>{0, 1, 1, 0 },
+            //    new List<int>{0, 0, 1, 0 },
+            //    new List<int>{1, 0, 0, 0 }
+            //};
 
-            List<List<int>> matrix2 = new List<List<int>>
-            {
-                new List<int>{ 0, 1, 0, 0, 0, 0, 1, 1, 0},
-                new List<int>{ 1, 1, 0, 0, 1, 0, 0, 0, 1 },
-                new List<int>{ 0, 0, 0, 0, 1, 0, 1, 0, 0 },
-                new List<int>{ 0, 1, 1, 1, 0, 1, 0, 1, 1 },
-                new List<int>{ 0, 1, 1, 1, 0, 0, 1, 1, 0 },
-                new List<int>{ 0, 1, 0, 1, 1, 0, 1, 1, 0 },
-                new List<int>{ 0, 1, 0, 0, 1, 1, 0, 1, 1 },
-                new List<int>{ 1, 0, 1, 1, 1, 1, 0, 0, 0 }
-            };
+            //List<List<int>> matrix2 = new List<List<int>>
+            //{
+            //    new List<int>{ 0, 1, 0, 0, 0, 0, 1, 1, 0},
+            //    new List<int>{ 1, 1, 0, 0, 1, 0, 0, 0, 1 },
+            //    new List<int>{ 0, 0, 0, 0, 1, 0, 1, 0, 0 },
+            //    new List<int>{ 0, 1, 1, 1, 0, 1, 0, 1, 1 },
+            //    new List<int>{ 0, 1, 1, 1, 0, 0, 1, 1, 0 },
+            //    new List<int>{ 0, 1, 0, 1, 1, 0, 1, 1, 0 },
+            //    new List<int>{ 0, 1, 0, 0, 1, 1, 0, 1, 1 },
+            //    new List<int>{ 1, 0, 1, 1, 1, 1, 0, 0, 0 }
+            //};
 
-            Prep3MonthsWk11.connectedCell(matrix2);
+            //Prep3MonthsWk11.connectedCell(matrix2);
 
-            List<List<int>> edges = new List<List<int>>
-            {
-                new List<int> {1, 2, 3 },
-                new List<int> {1, 3, 4 },
-                new List<int> {4, 2, 6 },
-                new List<int> {5, 2, 2 },
-                new List<int> {2, 3, 5 },
-                new List<int> {3, 5, 7 },
-            };
+            //List<List<int>> edges = new List<List<int>>
+            //{
+            //    new List<int> {1, 2, 3 },
+            //    new List<int> {1, 3, 4 },
+            //    new List<int> {4, 2, 6 },
+            //    new List<int> {5, 2, 2 },
+            //    new List<int> {2, 3, 5 },
+            //    new List<int> {3, 5, 7 },
+            //};
             //Prep3MonthsWk12.prims(5, edges, 1);
 
             //Console.WriteLine(Prep3MonthsWk12.beadOrnaments(new List<int> { 2, 1 }));
@@ -325,16 +325,16 @@ namespace HackerRank
             //Console.WriteLine(Prep3MonthsWk12.beadOrnaments(new List<int> { 9,10,8 }));
             //Console.WriteLine(Prep3MonthsWk12.beadOrnaments(new List<int> { 30, 28, 22, 27, 22, 30, 26, 30, 21 }));
 
-            List<List<int>> graph = new List<List<int>>
-            {
-                new List<int>{1, 2, 20},
-                new List<int>{1, 3, 50},
-                new List<int>{1, 4, 70},
-                new List<int>{1, 5, 90},
-                new List<int>{2, 3, 30},
-                new List<int>{3, 4, 40},
-                new List<int>{4, 5, 60}
-            };
+            //List<List<int>> graph = new List<List<int>>
+            //{
+            //    new List<int>{1, 2, 20},
+            //    new List<int>{1, 3, 50},
+            //    new List<int>{1, 4, 70},
+            //    new List<int>{1, 5, 90},
+            //    new List<int>{2, 3, 30},
+            //    new List<int>{3, 4, 40},
+            //    new List<int>{4, 5, 60}
+            //};
             //Prep3MonthsWk12.shortestPath(5, graph, new List<List<int>> { new List<int> { 5, 1 } });
             //Prep3MonthsWk12.shortestPath(5, graph, new List<int> { 2, 5 });
 
@@ -540,53 +540,38 @@ namespace HackerRank
 
             //Prep3MonthsWk13.shortPalindrome("ghhggh");
 
-            List<int> ctData = new List<int>
-            {
-                100, 200, 100, 500, 100, 600
-            };
-            List<List<int>> ctEdges = new List<List<int>>
-            {
-                new List<int>{1,2},
-                new List<int>{2,3},
-                new List<int>{2,5},
-                new List<int>{4,5},
-                new List<int>{5,6},
-            };
-            Prep3MonthsWk13.cutTheTree(ctData, ctEdges);
-            List<int> ctData2 = new List<int>
-            {
-                205, 573, 985, 242, 830, 514, 592, 263, 142, 915
-            };
-            List<List<int>> ctEdges2 = new List<List<int>>
-            {
-                new List<int>{2,8},
-                new List<int>{10, 5},
-                new List<int>{1, 7},
-                new List<int>{6, 9},
-                new List<int>{4, 3},
-                new List<int>{8, 10},
-                new List<int>{5, 1},
-                new List<int>{7, 6},
-                new List<int>{9, 4},
-            };
-            Prep3MonthsWk13.cutTheTree(ctData2, ctEdges2);
+            //List<int> ctData = new List<int>
+            //{
+            //    100, 200, 100, 500, 100, 600
+            //};
+            //List<List<int>> ctEdges = new List<List<int>>
+            //{
+            //    new List<int>{1,2},
+            //    new List<int>{2,3},
+            //    new List<int>{2,5},
+            //    new List<int>{4,5},
+            //    new List<int>{5,6},
+            //};
+            //Prep3MonthsWk13.cutTheTree(ctData, ctEdges);
+            //List<int> ctData2 = new List<int>
+            //{
+            //    205, 573, 985, 242, 830, 514, 592, 263, 142, 915
+            //};
+            //List<List<int>> ctEdges2 = new List<List<int>>
+            //{
+            //    new List<int>{2,8},
+            //    new List<int>{10, 5},
+            //    new List<int>{1, 7},
+            //    new List<int>{6, 9},
+            //    new List<int>{4, 3},
+            //    new List<int>{8, 10},
+            //    new List<int>{5, 1},
+            //    new List<int>{7, 6},
+            //    new List<int>{9, 4},
+            //};
+            //Prep3MonthsWk13.cutTheTree(ctData2, ctEdges2);
 
-            Console.WriteLine("Hello, World!");
-        }                    
-        
-        public static int getNextCity(List<int> arr, int start, int k)
-        {
-            return 0;
-        }
-                
-        public static List<int> swap(List<int> q, int x, int y)
-        {
-            int temp = q[x];
-            q[x] = q[y];
-            q[y] = temp;
-            return q;
-        }                                                                              
-                                   
-                
+            //Console.WriteLine("Hello, World!");
+        }                                                                                                                                                  
     }
 }
